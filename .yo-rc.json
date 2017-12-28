@@ -8,7 +8,7 @@
     "baseName": "jhipsterdemo",
     "packageName": "com.mydemo.jhipsterdemo",
     "packageFolder": "com/mydemo/jhipsterdemo",
-    "serverPort": "8081",
+    "serverPort": "8080",
     "authenticationType": "jwt",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
@@ -18,21 +18,21 @@
     "prodDatabaseType": "mysql",
     "searchEngine": false,
     "messageBroker": false,
-    "serviceDiscoveryType": "eureka",
+    "serviceDiscoveryType": false,
     "buildTool": "maven",
     "enableSocialSignIn": false,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "0b258f38133122a36baaf6ba4eb53144c69adf23",
-    "enableTranslation": true,
-    "applicationType": "microservice",
+    "jwtSecretKey": "21a43f51574ee36cdf415e7e8da14eb9545d9b16",
+    "clientFramework": "angular1",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "applicationType": "monolith",
     "testFrameworks": [],
     "jhiPrefix": "jhi",
+    "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
       "en"
-    ],
-    "clientPackageManager": "npm",
-    "skipClient": true,
-    "skipUserManagement": true
+    ]
   }
 }

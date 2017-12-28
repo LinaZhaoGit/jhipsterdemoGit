@@ -1,16 +1,31 @@
 # jhipsterdemo
 This application was generated using JHipster 4.13.0, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.13.0](http://www.jhipster.tech/documentation-archive/v4.13.0).
 
-This is a "microservice" application intended to be part of a microservice architecture, please refer to the [Doing microservices with JHipster][] page of the documentation for more information.
-
-This application is configured for Service Discovery and Configuration with the JHipster-Registry. On launch, it will refuse to start if it is not able to connect to the JHipster-Registry at [http://localhost:8761](http://localhost:8761). For more information, read our documentation on [Service Discovery and Configuration with the JHipster-Registry][].
-
 ## Development
 
-To start your application in the dev profile, simply run:
+Before you can build this project, you must install and configure the following dependencies on your machine:
+
+1. [Node.js][]: We use Node to run a development web server and build the project.
+   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
+
+After installing Node, you should be able to run the following command to install development tools.
+You will only need to run this command when dependencies change in [package.json](package.json).
+
+    npm install
+
+We use [Gulp][] as our build system. Install the Gulp command-line tool globally with:
+
+    npm install -g gulp-cli
+
+Run the following commands in two separate terminals to create a blissful development experience where your browser
+auto-refreshes when files change on your hard drive.
 
     ./mvnw
+    gulp
 
+[Bower][] is used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
+specifying a newer version in [bower.json](bower.json). You can also run `bower update` and `bower install` to manage dependencies.
+Add the `-h` flag on any command to see how you can use it. For example, `bower update -h`.
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
 
@@ -22,10 +37,12 @@ To optimize the jhipsterdemo application for production, run:
 
     ./mvnw -Pprod clean package
 
+This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
 To ensure everything worked, run:
 
     java -jar target/*.war
 
+Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
 
 Refer to [Using JHipster in production][] for more details.
 
@@ -34,6 +51,14 @@ Refer to [Using JHipster in production][] for more details.
 To launch your application's tests, run:
 
     ./mvnw clean test
+
+### Client tests
+
+Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
+
+    gulp test
+
+
 
 For more information, refer to the [Running tests page][].
 
@@ -66,12 +91,21 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 
 [JHipster Homepage and latest documentation]: http://www.jhipster.tech
 [JHipster 4.13.0 archive]: http://www.jhipster.tech/documentation-archive/v4.13.0
-[Doing microservices with JHipster]: http://www.jhipster.tech/documentation-archive/v4.13.0/microservices-architecture/
+
 [Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.13.0/development/
-[Service Discovery and Configuration with the JHipster-Registry]: http://www.jhipster.tech/documentation-archive/v4.13.0/microservices-architecture/#jhipster-registry
 [Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.13.0/docker-compose
 [Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.13.0/production/
 [Running tests page]: http://www.jhipster.tech/documentation-archive/v4.13.0/running-tests/
 [Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.13.0/setting-up-ci/
 
 
+[Node.js]: https://nodejs.org/
+[Yarn]: https://yarnpkg.org/
+[Bower]: http://bower.io/
+[Gulp]: http://gulpjs.com/
+[BrowserSync]: http://www.browsersync.io/
+[Karma]: http://karma-runner.github.io/
+[Jasmine]: http://jasmine.github.io/2.0/introduction.html
+[Protractor]: https://angular.github.io/protractor/
+[Leaflet]: http://leafletjs.com/
+[DefinitelyTyped]: http://definitelytyped.org/
